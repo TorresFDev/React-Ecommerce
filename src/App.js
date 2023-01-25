@@ -1,11 +1,17 @@
 
+import React from 'react';
+import NavBar from './components/NavBar.jsx';
+import Inicio from './components/Inicio.jsx';
+import ItemListContainer from './components/ItemListContainer.jsx';
 import './App.css';
-import NavBar from './components/NavBar';
 
-function App() {
+export default function App() {
   return (
-    <NavBar background={"transparent"}/>
+    <>
+      <NavBar background={'transparent'} />
+      <Inicio title="Coder Store" />
+      <ItemListContainer greeting= "Lista de Productos"/>
+
+    </>
   );
 }
-
-export default App;
