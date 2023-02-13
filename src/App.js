@@ -10,7 +10,7 @@ export default function App() {
     <>
       <NavBar background={'transparent'} />
       <Inicio title="Coder Store" />
-      <Card />
+      <Card/>
 
 
     </>

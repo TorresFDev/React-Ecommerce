@@ -9,9 +9,7 @@ const Inicio = ({ title }) => {
       <div className="fondo-container">
         <article className="fondo-container__text-box">
           <h1>{title}</h1>
-
           <p>Bienvenido a nuestra tienda</p>
-          <button className="button-primary">Comprar</button>
         </article>
       </div>
     </section>
