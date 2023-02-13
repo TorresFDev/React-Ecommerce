@@ -25,7 +25,7 @@ const NavBar = ({ background }) => {
             </li>
             <li className="products-item">
               <a href="/">
-                Productos <span className="arrow"></span>
+                Productos 
               </a>
             </li>
             <li>
