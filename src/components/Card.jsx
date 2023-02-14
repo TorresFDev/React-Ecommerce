@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/Card.css';
-import {collection,getDocs,deleteDoc,doc} from "firebase/firestore"
-import {db} from "../firebaseConfig/firebase.js";
+// import {collection,getDocs,deleteDoc,doc} from "firebase/firestore"
+// import {db} from "../firebaseConfig/firebase.js";
 
-const Card = () => {
+export default function Card() {
 
     return (
 
@@ -27,5 +27,3 @@ const Card = () => {
 
 );
 };
-
-export default Card;

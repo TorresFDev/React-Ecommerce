@@ -1,105 +1,101 @@
-.header {
-    position: absolute;
+header {
     width: 100%;
-  }
-  .header-container {
-    display: grid;
-    /* grid-template: 1fr / 1fr 1fr 1fr; */
-    grid-template: 1fr 1fr/ 1fr 1fr;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 1024;
-  }
-  
-  .logo-container {
-    grid-column: 1 / span 2;
-    grid-row: first-line / 1;
-    padding-top: 3px;
-    cursor: pointer;
-    justify-self: center;
-  }
-  
-  .menu-button {
-    justify-self: center;
-    cursor: pointer;
-  }
-  
-  .menu-button span {
-    margin-left: 10px;
-    color: white;
-    font-size: 18px;
-  }
-  
-  nav {
-    display: none;
-  }
-  
-  .nav-container {
+    height: 80px;
+    background: #11101b;
     display: flex;
-    width: 100%;
-    margin-left: 40%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+  }
+
+
+.logo{
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
+}
+
+.hamburger{
+  display: none;
+}
+
+.nav-bar .container-list{
+  display: flex;
+}
+
+.nav-bar .container-list .list-nav-bar a {
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius:50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar .container-list .list-nav-bar a:hover{
+  color: #11101b;
+  background: #fefefe;
+}
+
+.nav-bar .container-list .list-nav-bar a.active{
+  color: #11101b;
+  background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px){
+  header{
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px){
+  header{
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  .hamburger{
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line{
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+  }
+  .nav-bar{
+    height: 0px;
+    position: absolute;
+    top:80px;
+    left: 0;
+    right: 0;
+    width: 100vh;
+    background: #11101b;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .nav-bar.active{
+    height: 450px;
+  }
+
+  .nav-bar .container-list{
+    display: block;
+    width: fit-content;
+    margin:80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar.active .container-list{
+  opacity: 1;
+  }
+  .nav-bar .container-list .list-nav-bar a{
+    margin-bottom: 12px;
+    color: red;
 
   }
-  
-  .nav-container li {
-    margin: 0 80px;
-    list-style: none;
-  }
-  
-  .nav-container li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-  }
-  
-  .products-item {
-    min-width: 100px;
-  }
-  
-
-  .background--transparent {
-    background-color: transparent;
-  }
-  
-  .background--black {
-    background-color: rgba(29, 29, 29, 0.9);
-  }
-  
-  .arrow::after {
-    width: 5px;
-    height: 5px;
-    transform: rotate(135deg);
-    border-right: 1px solid currentColor;
-    border-top: 1px solid currentColor;
-    content: '';
-    background-color: transparent;
-    display: inline-block;
-    vertical-align: middle;
-    transition: all 0.4s ease-in-out 0s;
-  }
-  
-
-  
-  @media only screen and (min-width: 800px) {
-    nav {
-      display: block;
-      justify-self: center;
-    }
-  
-    .menu-button {
-      display: none;
-    }
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .header-container {
-      grid-template: 1fr / 1fr 1fr 1fr;
-    }
-  
-    .logo-container {
-      grid-column: auto;
-      grid-row: auto;
-    }
-  }
+}

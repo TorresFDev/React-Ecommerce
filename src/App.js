@@ -10,7 +10,7 @@ export default function App() {
     return (
         <>
             <BrowserRouter>
-                <NavBar background={"transparent"} />
+                <NavBar  />
                 <Inicio title="Coder Store" />
                 <Routes>
                     <Route path="/" element={<Home />} />

@@ -1,42 +1,59 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./styles/NavBar.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const NavBar = ({ background }) => {
+const NavBar = () => {
+
+//     hamburger = document.queryselector(".hamburger");
+//     hamburger.onclick = function(){
+//     navBar = document.querySelector(".nav-bar");
+//     navBar.classList.toggle("active");}
+    
+
     return (
-        <header className={`header background--${background}`}>
-            <div className="header-container">
-                <div className="menu-button">
-                    <FontAwesomeIcon icon={faBars} size="lg" color="white" />
-                    <span>Menu</span>
-                </div>
-
-                <nav>
-                    <ul className="nav-container">
-                        <li>
-                            <Link to="/">Inicio</Link>
-                        </li>
-                        <li className="products-item">
-                            <Link to="/category">Productos</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/aboutus">Nosotros</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">Contacto</Link>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div className="logo-container"></div>
-                <CartWidget />
+        <header >
+            <div className="logo">ReactCoder</div>
+            <div className= "hamburger">
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
             </div>
+            <nav className ="nav-bar">
+                <ul className="container-list">
+                    <li className="list-nav-bar">
+                        <a href="/" className="active"> inicio </a>
+                    </li>
+                    <li className="list-nav-bar">
+                        <a href="/" className="active"> productos </a>
+                    </li>
+                    <li className="list-nav-bar">
+                        <a href="/" className="active"> nosotros </a>
+                    </li>
+                    <li className="list-nav-bar">
+                        <a href="/" className="active"> contacto </a>
+                    </li>
+                    <li className="list-nav-bar">
+                        <CartWidget />
+                    </li>
+                </ul>
+
+            </nav>
+
+            
+
+            
+     
+  
         </header>
+
     );
 };
 
+
+
 export default NavBar;
+
+
