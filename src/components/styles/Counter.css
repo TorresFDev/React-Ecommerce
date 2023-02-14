@@ -1,0 +1,22 @@
+.boton-contador{
+    color: white;
+    width: 15%;
+    height: 15%;
+    background-color: black;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.contador-num{
+    font-size: 20px;
+}
+
+.boton-carrito{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 20px;
+}
