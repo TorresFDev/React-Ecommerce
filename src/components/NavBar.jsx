@@ -1,59 +1,34 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import {Link} from "react-router-dom"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "./styles/NavBar.css";
+
 // import { Link } from "react-router-dom";
 
-const NavBar = () => {
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-//     hamburger = document.queryselector(".hamburger");
-//     hamburger.onclick = function(){
-//     navBar = document.querySelector(".nav-bar");
-//     navBar.classList.toggle("active");}
-    
+function NavBar() {
+  return (
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">React Ecommerce</Navbar.Brand>
+          <Nav className="me-auto">
+            <Link to="/inicio">Inicio</Link>
+            <Link to="/category">Productos</Link>
+            <Nav.Link href="#pricing">Nosotros</Nav.Link>
+            <CartWidget/>
+          </Nav>
+        </Container>
+      </Navbar>
+      </>
 
-    return (
-        <header >
-            <div className="logo">ReactCoder</div>
-            <div className= "hamburger">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </div>
-            <nav className ="nav-bar">
-                <ul className="container-list">
-                    <li className="list-nav-bar">
-                        <a href="/" className="active"> inicio </a>
-                    </li>
-                    <li className="list-nav-bar">
-                        <a href="/" className="active"> productos </a>
-                    </li>
-                    <li className="list-nav-bar">
-                        <a href="/" className="active"> nosotros </a>
-                    </li>
-                    <li className="list-nav-bar">
-                        <a href="/" className="active"> contacto </a>
-                    </li>
-                    <li className="list-nav-bar">
-                        <CartWidget />
-                    </li>
-                </ul>
+      )
+    }
 
-            </nav>
-
-            
-
-            
-     
-  
-        </header>
-
-    );
-};
-
-
-
-export default NavBar;
+      export default NavBar;
 
 

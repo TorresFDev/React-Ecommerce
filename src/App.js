@@ -4,7 +4,7 @@ import Inicio from "./components/Inicio.jsx";
 import Card from "./components/Card.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home.jsx";
+
 
 export default function App() {
     return (
@@ -13,7 +13,7 @@ export default function App() {
                 <NavBar  />
                 <Inicio title="Coder Store" />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Inicio />} />
                     <Route path="/category" element={<Card />} />
                 </Routes>
             </BrowserRouter>
